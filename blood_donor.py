@@ -1,18 +1,28 @@
 """ this program assesses whether or not a blood donor is eligible for blood"""
 
-keep_asking = True
-while keep_asking == True:
-
+'''this function check() checks to see if the user input is an integer'''
+def check(a):
     try:
-
-        age = float(input("Please Enter Your Age"))
-        weight = float(input("Please Enter Your Weight"))
-
-        if age >= 16 and weight >= 50:
-            print("You Are Eligible")
-        else:
-            print("You Are Not ELigible")
-
-        keep_asking = False
+        a = int(a)
+        return True
     except ValueError:
-        print("Try again")
+        return False
+
+
+get_age = True
+while get_age == True:
+    age = input("Age")
+    if check(age):
+        get_age = False
+    else:
+        print("Oops")
+
+
+get_weight = True
+while get_weight == True:
+    weight = input("Weight")
+    if check(weight):
+        get_weight = False
+    else:
+        print("Opps")
+
