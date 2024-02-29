@@ -8,6 +8,19 @@ names = []
 
 # get prize
 prize = input("What is the prize for your raffle ")
+
+# get value from input
+# Try and Except
+get_value = True
+while get_value == True:
+    try:
+        value = float(input("Enter value:"))
+        get_value = False
+    except ValueError:
+        print("Please Enter a Number")
+
+
+
 # welcome message
 print("Please enter the names who will be participating, and press enter!")
 # repeat forever untill keep_asking equals false
