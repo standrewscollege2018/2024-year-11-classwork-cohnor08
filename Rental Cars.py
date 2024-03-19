@@ -1,5 +1,6 @@
 """ this program is a rental booking system to allocate cars by the number of seats """
 
+waita = 0
 import time
 
 cars = [
@@ -15,7 +16,7 @@ cars = [
 ]
 
 print("Here is a list of car's for the day")
-time.sleep(3)
+time.sleep(waita)
 
 for i in range(len(cars)):
     available = " not"
@@ -27,23 +28,17 @@ for i in range(len(cars)):
     time.sleep(0.2)
 
 print()
-car_temp = int(input("What Car Would You Like to Rent"))
-cars[car_temp - 1][2] = False
+run_pxrogram = True
+while run_program:
+    car_temp = int(input("What Car Would You Like to Rent? "))
+    if car_temp == 0:
+        run_program = False
+    elif cars[car_temp-1][2] == False:
+            print("Sorry that car is not availavle")
+    else:
+        cars[car_temp - 1][2] = False
+        name = input("Enter name")
 print(cars)
-
-for i in range(len(cars)):
-    if cars[i][2] == False:
-        print("Sorry that car is not availavle")
-
-
-
-
-
-
-
-
-
-
 
 
 
