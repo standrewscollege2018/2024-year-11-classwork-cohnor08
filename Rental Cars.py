@@ -28,7 +28,7 @@ for i in range(len(cars)):
     time.sleep(0.2)
 
 print()
-run_pxrogram = True
+run_program = True
 while run_program:
     car_temp = int(input("What Car Would You Like to Rent? "))
     if car_temp == 0:
@@ -37,7 +37,7 @@ while run_program:
             print("Sorry that car is not availavle")
     else:
         cars[car_temp - 1][2] = False
-        name = input("Enter name")
+        name = input("Enter Name ")
 print(cars)
 
 
