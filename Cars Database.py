@@ -15,20 +15,3 @@ cursor = connection.cursor()
 cursor.execute("SELECT firstName, lastName, tutorGroup FROM student LIMIT 5")
 
 results = cursor.fetchall()
-
-# Look over results list and display one at a time
-
-print(f"{'First Name':12} {'Last Name':15} Tutor Group")
-print("="*40)
-
-for students in results:
-    print(f"{students[0]:10} {students[1]:15} {students[2]:15}")
-
-
-
-
-'''
-# Or this way
-for i in range(len(results)):
-    print(f"{results[i][0]} {results[i][1]}")
-    '''
