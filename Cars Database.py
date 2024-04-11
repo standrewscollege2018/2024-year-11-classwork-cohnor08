@@ -15,3 +15,4 @@ cursor = connection.cursor()
 cursor.execute("SELECT firstName, lastName, tutorGroup FROM student LIMIT 5")
 
 results = cursor.fetchall()
+results = [[firstname][lastname][tutorGroup]]
