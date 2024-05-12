@@ -32,3 +32,13 @@ for students in results:
 for i in range(len(results)):
     print(f"{results[i][0]} {results[i][1]}")
     '''
+
+
+
+how to search
+Select * from premier leage where name LIKE '%_%'
+
+
+
+
+
